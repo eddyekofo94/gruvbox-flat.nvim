@@ -1,4 +1,4 @@
-# onedark Alacritty Colors
+# gruvbox Alacritty Colors TODO: check to gruvbox-flat colors
 colors:
   # Default colors
   primary:
@@ -30,5 +30,5 @@ colors:
   indexed_colors:
     - { index: 16, color: '0xd19a66' }
     - { index: 17, color: '0xf65866' }
-    
-  
+
+

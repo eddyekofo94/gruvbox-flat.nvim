@@ -1,12 +1,12 @@
-local util = require("onedark.util")
-local colors = require("onedark.colors")
+local util = require("gruvbox.util")
+local colors = require("gruvbox.colors")
 
 local M = {}
 
 ---@param config Config
 ---@return Theme
 function M.setup(config)
-  config = config or require("onedark.config")
+  config = config or require("gruvbox..config")
 
   ---@class Theme
   local theme = {}

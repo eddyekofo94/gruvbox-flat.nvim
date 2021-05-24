@@ -1,11 +1,11 @@
-local util = require("onedark.util")
+local util = require("gruvbox.util")
 
 local M = {}
 
 function M.alacritty(config)
-  config = config or require("onedark.config")
+  config = config or require("gruvbox.config")
   config.transform_colors = true
-  local colors = require("onedark.colors").setup(config)
+  local colors = require("gruvbox.colors").setup(config)
 
   local alacrittyColors = {}
   for k, v in pairs(colors) do
@@ -16,7 +16,7 @@ function M.alacritty(config)
 
   local alacritty = util.template(
     [[
-# onedark Alacritty Colors
+# gruvbox Alacritty Colors
 colors:
   # Default colors
   primary:
@@ -48,7 +48,7 @@ colors:
   indexed_colors:
     - { index: 16, color: '${orange}' }
     - { index: 17, color: '${red1}' }
-    
+
   ]],
     alacrittyColors
   )

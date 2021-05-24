@@ -1,9 +1,9 @@
 " clear cache so this reloads changes.
 " useful for development
-lua package.loaded['onedark'] = nil
-lua package.loaded['onedark.theme'] = nil
-lua package.loaded['onedark.colors'] = nil
-lua package.loaded['onedark.util'] = nil
-lua package.loaded['onedark.config'] = nil
+lua package.loaded['gruvbox'] = nil
+lua package.loaded['gruvbox.theme'] = nil
+lua package.loaded['gruvbox.colors'] = nil
+lua package.loaded['gruvbox.util'] = nil
+lua package.loaded['gruvbox.config'] = nil
 
-lua require('onedark').colorscheme()
+lua require('gruvbox').colorscheme()

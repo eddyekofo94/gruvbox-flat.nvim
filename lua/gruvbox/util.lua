@@ -1,4 +1,4 @@
-local hsluv = require("onedark.hsluv")
+local hsluv = require("gruvbox.hsluv")
 
 local util = {}
 
@@ -82,7 +82,7 @@ function util.getColor(color)
   return util.colorCache[color]
 end
 
--- local ns = vim.api.nvim_create_namespace("onedark")
+-- local ns = vim.api.nvim_create_namespace("gruvbox")
 function util.highlight(group, color)
   if color.fg then
     util.colorsUsed[color.fg] = true
@@ -115,7 +115,7 @@ function util.highlight(group, color)
 end
 
 function util.debug(colors)
-  colors = colors or require("onedark.colors")
+  colors = colors or require("gruvbox.colors")
   -- Dump unused colors
   for name, color in pairs(colors) do
     if type(color) == "table" then
@@ -130,19 +130,19 @@ end
 
 --- Delete the autocmds when the theme changes to something else
 function util.onColorScheme()
-  if vim.g.colors_name ~= "onedark" then
-    vim.cmd([[autocmd! onedark]])
-    vim.cmd([[augroup! onedark]])
+  if vim.g.colors_name ~= "gruvbox" then
+    vim.cmd([[autocmd! gruvbox]])
+    vim.cmd([[augroup! gruvbox]])
   end
 end
 
 ---@param config Config
 function util.autocmds(config)
-  vim.cmd([[augroup onedark]])
+  vim.cmd([[augroup gruvbox]])
   vim.cmd([[  autocmd!]])
-  vim.cmd([[  autocmd ColorScheme * lua require("onedark.util").onColorScheme()]])
+  vim.cmd([[  autocmd ColorScheme * lua require("gruvbox.util").onColorScheme()]])
   if config.dev then
-    vim.cmd([[  autocmd BufWritePost */lua/onedark/** nested colorscheme onedark]])
+    vim.cmd([[  autocmd BufWritePost */lua/gruvbox/** nested colorscheme gruvbox]])
   end
   for _, sidebar in ipairs(config.sidebars) do
     if sidebar == "terminal" then
@@ -227,7 +227,7 @@ function util.load(theme)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "onedark"
+  vim.g.colors_name = "gruvbox"
   -- vim.api.nvim__set_hl_ns(ns)
   -- load base theme
   util.syntax(theme.base)

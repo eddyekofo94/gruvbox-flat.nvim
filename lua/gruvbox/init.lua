@@ -1,5 +1,5 @@
-local util = require("onedark.util")
-local theme = require("onedark.theme")
+local util = require("gruvbox.util")
+local theme = require("gruvbox.theme")
 
 local M = {}
 

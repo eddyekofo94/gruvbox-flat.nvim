@@ -1,6 +1,6 @@
 package.path = "./lua/?/init.lua;./lua/?.lua"
 
-local config = require("onedark.config")
+local config = require("gruvbox.config")
 
 local function write(str, fileName)
   print("[write] extra/" .. fileName)
@@ -11,6 +11,6 @@ end
 
 local extras = { kitty = "conf", alacritty = "yml" }
 for extra, ext in pairs(extras) do
-  local plugin = require("onedark.extra." .. extra)
-  write(plugin[extra](config), extra .. "_onedark_" .. "." .. ext)
+  local plugin = require("gruvbox.extra." .. extra)
+  write(plugin[extra](config), extra .. "_gruvbox_" .. "." .. ext)
 end
