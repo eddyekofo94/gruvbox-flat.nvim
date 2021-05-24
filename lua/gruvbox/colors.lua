@@ -29,25 +29,21 @@ function M.setup(config)
     purple = "#d3869b",
     orange = "#e78a4e",
     yellow = "#d8a657",
-    yellow2 = "#b47109", -- TODO: look for another yellow on the pallet
+    yellow2 = "#b47109",
     bg_yellow = "#a96b2c",
     green = "#a9b665",
     red = "#ea6962",
-    red1 = "#c14a4a", -- TODO: maybe look for another red
+    red1 = "#c14a4a",
+    black = "#1d2021",
     git = {
       change = "#4f422e",
       add = "#3b4439",
       delete = "#402120",
-      conflict = "#bb7a61", -- TODO: find a different color maybe?
+      conflict = "#bb7a61",
     },
-    gitSigns = {
-      change = "#4f422e",
-      add = "#3b4439",
-      delete = "#402120",
-    },
+    gitSigns = { change = "#4f422e", add = "#3b4439", delete = "#402120" },
 
   }
-
 
   util.bg = colors.bg
 
@@ -65,7 +61,7 @@ function M.setup(config)
   }
 
   colors.git.ignore = colors.fg_gutter
-  colors.black = util.darken(colors.bg, 0.8, "#000000")
+  colors.black = util.darken(colors.bg, 0.8, "#1d2021")
   colors.border_highlight = colors.blue
 
   -- Popups and statusline always get a dark background
