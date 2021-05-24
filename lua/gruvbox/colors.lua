@@ -16,7 +16,7 @@ function M.setup(config)
     bg  = "#32302f",
     bg2 = "#282828",
     bg_visual = "#45403d",
-    border = "#f2e5bc",
+    border = "#5a524c",
     bg_highlight = "#45403d",
     fg = "#d4be98",
     fg_light = "#ddc7a1",
