@@ -40,6 +40,12 @@ function M.setup(config)
     gitSigns = { change = "#4f422e", add = "#3b4439", delete = "#402120" },
   }
 
+  -- set the background to dark
+  if vim.g.gruvbox_flat_style == "dark" then
+    colors.bg2 = "#1d2021"
+    colors.bg = "#282828"
+  end
+
   util.bg = colors.bg
 
   colors.diff = {

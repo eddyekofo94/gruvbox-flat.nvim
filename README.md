@@ -4,7 +4,7 @@ A dark beautiful Neovim theme written in Lua. [Coming soon] extra themes for Kit
 - Inspired by [sainnhe's gruvbox-material](https://github.com/sainnhe/gruvbox-material) but written in lua
 - A fork of [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
 
-<img width="1680" alt="rust code" src="./media/rust-gruvbox.png">
+<img width="1680" alt="rust code" src="./media/gruvbox-original.png">
 
 <img width="1680" alt="pallet" src="./media/pallet-gruvbox.png">
 
@@ -85,6 +85,13 @@ To enable the `gruvbox-flat` colorscheme for `Lightline`:
 " Vim Script
 let g:lightline = {'colorscheme': 'gruvbox-flat'}
 ```
+
+To enable darker mode
+```lua
+vim.g.gruvbox_flat_style = "dark"
+
+```
+<img width="1680" alt="rust code" src="./media/gruvbox-dark.png">
 
 ## ⚙️ Configuration
 
