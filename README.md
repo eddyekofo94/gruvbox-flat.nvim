@@ -1,6 +1,8 @@
-# gruvbox
+# Gruvbox Flat
 
-A dark Neovim theme written in Lua. [Coming soon] extra themes for Kitty and Alacritty
+A dark beautiful Neovim theme written in Lua. [Coming soon] extra themes for Kitty and Alacritty
+- Inspired by [sainnhe's gruvbox-material](https://github.com/sainnhe/gruvbox-material) but written in lua
+- A fork of [onedark.nvim](https://github.com/monsonjeremy/onedark.nvim)
 
 <img width="1680" alt="rust code" src="./media/rust-gruvbox.png">
 
@@ -133,4 +135,9 @@ set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
+✅ ### TODO
+- [ ]  Generate theme for Kitty
+- [ ]  Generate theme for Alacritty
+- [ ]  Add light theme
+- [ ]  Add hard/darker theme
 
