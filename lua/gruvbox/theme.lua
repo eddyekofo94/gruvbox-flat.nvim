@@ -21,8 +21,8 @@ function M.setup(config)
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
     lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
-    CursorColumn = { bg = c.bg_highlight }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = c.bg_highlight }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorColumn = { bg = c.cursor }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine = { bg = c.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = c.blue }, -- directory names (and other special names in listings)
     DiffAdd = { bg = c.diff.add }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
@@ -293,7 +293,7 @@ function M.setup(config)
     TelescopePromptBorder = { fg = c.prompt_border },
     TelescopeSelectionCaret = { fg = c.purple },
     TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
-    TelescopeMatching = { fg = c.cyan },
+    TelescopeMatching = { fg = c.aqua },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_light, bg = c.bg_sidebar },
@@ -331,6 +331,12 @@ function M.setup(config)
     DiagnosticWarning = { fg = c.warning },
     DiagnosticInformation = { fg = c.info },
     DiagnosticHint = { fg = c.hint },
+    LspSagaHoverBorder = { fg = c.border},
+    LspSagaSignatureHelpBorder = { fg = c.border},
+    LspSagaCodeActionBorder = { fg = c.border},
+    LspSagaAutoPreview = { fg = c.border},
+    LspSagaDefPreviewBorder = {fg = c.border},
+    LspLinesDiagBorder = { fg = c.border},
 
     -- NeoVim
     healthError = { fg = c.error },
