@@ -37,7 +37,6 @@ function M.setup(config)
     black = "#1d2021",
     git = { change = "#b47109", add = "#4c7a5d", delete = "#c14a4a", conflict = "#bb7a61" },
     gitSigns = { change = "#4f422e", add = "#3b4439", delete = "#402120" },
-
   }
 
   util.bg = colors.bg
