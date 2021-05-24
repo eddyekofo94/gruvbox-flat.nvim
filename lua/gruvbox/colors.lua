@@ -13,7 +13,7 @@ function M.setup(config)
 
   colors = {
     none = "NONE",
-    bg  = "#32302f",
+    bg = "#32302f",
     bg2 = "#282828",
     bg_visual = "#45403d",
     border = "#5a524c",
@@ -35,12 +35,7 @@ function M.setup(config)
     red = "#ea6962",
     red1 = "#c14a4a",
     black = "#1d2021",
-    git = {
-      change = "#4f422e",
-      add = "#3b4439",
-      delete = "#402120",
-      conflict = "#bb7a61",
-    },
+    git = { change = "#b47109", add = "#4c7a5d", delete = "#c14a4a", conflict = "#bb7a61" },
     gitSigns = { change = "#4f422e", add = "#3b4439", delete = "#402120" },
 
   }
