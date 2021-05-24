@@ -290,6 +290,7 @@ function M.setup(config)
 
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight },
+    TelescopePromptBorder = { fg = c.prompt_border },
     TelescopeSelectionCaret = { fg = c.purple },
     TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
     TelescopeMatching = { fg = c.cyan },
