@@ -1,10 +1,10 @@
-# OneDark
+# gruvbox
 
-A dark Neovim theme written in Lua. Includes extra themes for Kitty and Alacritty
+A dark Neovim theme written in Lua. [Coming soon] extra themes for Kitty and Alacritty
 
-<img width="1680" alt="Screen Shot 2021-05-23 at 3 48 41 PM" src="https://user-images.githubusercontent.com/8846086/119279210-16d39c00-bbdf-11eb-8604-b7258c8ff72e.png">
+<img width="1680" alt="rust code" src="./media/rust-gruvbox.png">
 
-<img width="1680" alt="Screen Shot 2021-05-23 at 2 51 04 PM" src="https://user-images.githubusercontent.com/8846086/119279233-32d73d80-bbdf-11eb-8bad-34c92cb48ab2.png">
+<img width="1680" alt="pallet" src="./media/pallet-gruvbox.png">
 
 ## ✨ Features
 
@@ -12,7 +12,6 @@ A dark Neovim theme written in Lua. Includes extra themes for Kitty and Alacritt
 - minimal inactive statusline (currently bugged)
 - vim terminal colors
 - darker background for sidebar-like windows
-- color configs for [Kitty](https://sw.kovidgoyal.net/kitty/conf.html?highlight=include) and [Alacritty](https://github.com/alacritty/alacritty) 
 - **lualine** theme
 
 ### Plugin Support
@@ -44,13 +43,13 @@ Install the theme with your preferred package manager:
 [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'monsonjeremy/onedark.nvim'
+Plug 'eddyekofo94/gruvbox-flat.nvim'
 ```
 
 [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
-use 'monsonjeremy/onedark.nvim'
+use 'eddyekofo94/gruvbox-flat.nvim'
 ```
 
 ## 🚀 Usage
@@ -59,69 +58,69 @@ Enable the colorscheme:
 
 ```vim
 " Vim Script
-colorscheme onedark
+colorscheme gruvbox-flat
 ```
 
 ```lua
 -- Lua
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme gruvbox-flat]]
 ```
 
-To enable the `onedark` theme for `Lualine`, simply specify it in your lualine settings:
+To enable the `gruvbox` theme for `Lualine`, simply specify it in your lualine settings:
 
 ```lua
 require('lualine').setup {
   options = {
-    theme = 'onedark'
+    theme = 'gruvbox-flat'
     -- ... your lualine config
   }
 }
 ```
 
-To enable the `onedark` colorscheme for `Lightline`:
+To enable the `gruvbox-flat` colorscheme for `Lightline`:
 
 ```vim
 " Vim Script
-let g:lightline = {'colorscheme': 'onedark'}
+let g:lightline = {'colorscheme': 'gruvbox-flat'}
 ```
 
 ## ⚙️ Configuration
 
-> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme onedark`
+> ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme gruvbox-flat`
 
 | Option                           | Default | Description                                                                                                                                                     |
 | -------------------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| onedark_terminal_colors          | `true`  | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
-| onedark_italic_comments          | `true`  | Make comments italic                                                                                                                                            |
-| onedark_italic_keywords          | `true`  | Make keywords italic                                                                                                                                            |
-| onedark_italic_functions         | `false` | Make functions italic                                                                                                                                           |
-| onedark_italic_variables         | `false` | Make variables and identifiers italic                                                                                                                           |
-| onedark_transparent              | `false` | Enable this to disable setting the background color                                                                                                             |
-| onedark_hide_inactive_statusline | `false` | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
-| onedark_sidebars                 | `{}`    | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
-| onedark_dark_sidebar             | `true`  | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
-| onedark_dark_float               | `true`  | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
-| onedark_colors                   | `{}`    | You can override specific color groups to use other groups or a hex color                                                                                       |
+| gruvbox_terminal_colors          | `true`  | Configure the colors used when opening a `:terminal` in Neovim                                                                                                  |
+| gruvbox_italic_comments          | `true`  | Make comments italic                                                                                                                                            |
+| gruvbox_italic_keywords          | `true`  | Make keywords italic                                                                                                                                            |
+| gruvbox_italic_functions         | `false` | Make functions italic                                                                                                                                           |
+| gruvbox_italic_variables         | `false` | Make variables and identifiers italic                                                                                                                           |
+| gruvbox_transparent              | `false` | Enable this to disable setting the background color                                                                                                             |
+| gruvbox_hide_inactive_statusline | `false` | Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**. |
+| gruvbox_sidebars                 | `{}`    | Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`                                                      |
+| gruvbox_dark_sidebar             | `true`  | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
+| gruvbox_dark_float               | `true`  | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
+| gruvbox_colors                   | `{}`    | You can override specific color groups to use other groups or a hex color                                                                                       |
 
 ```lua
 -- Example config in Lua
-vim.g.onedark_italic_functions = true
-vim.g.onedark_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+vim.g.gruvbox_italic_functions = true
+vim.g.gruvbox_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-vim.g.onedark_colors = { hint = "orange", error = "#ff0000" }
+vim.g.gruvbox_colors = { hint = "orange", error = "#ff0000" }
 
 -- Load the colorscheme
-vim.cmd[[colorscheme onedark]]
+vim.cmd[[colorscheme gruvbox-flat]]
 ```
 
 ```vim
 " Example config in VimScript
-let g:onedark_italic_functions = 1
-let g:onedark_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+let g:gruvbox_italic_functions = 1
+let g:gruvbox_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
 " Load the colorscheme
-colorscheme onedark
+colorscheme gruvbox-flat
 ```
 
 ### Making `undercurls` work properly in **Tmux**
@@ -135,8 +134,3 @@ set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
 
-## 🍭 Extras
-
-Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
-
-<img width="825" alt="Screen Shot 2021-05-23 at 2 49 57 PM" src="https://user-images.githubusercontent.com/8846086/119279221-23f08b00-bbdf-11eb-885e-c2c238aa1c04.png">
