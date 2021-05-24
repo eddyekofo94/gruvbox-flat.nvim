@@ -15,7 +15,7 @@ function M.setup(config)
   local c = theme.colors
 
   theme.base = {
-    Comment = { fg = c.fg_gutter, style = config.commentStyle }, -- any comment
+    Comment = { fg = c.comment, style = config.commentStyle }, -- any comment
     ColorColumn = { bg = c.bg_visual }, -- used for the columns set with 'colorcolumn'
     Conceal = { fg = c.fg_gutter }, -- placeholder characters substituted for concealed text (see 'conceallevel')
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
@@ -39,7 +39,7 @@ function M.setup(config)
     SignColumnSB = { bg = c.bg_sidebar, fg = c.fg_gutter }, -- column where |signs| are displayed
     Substitute = { bg = c.red, fg = c.black }, -- |:substitute| replacement text highlighting
     LineNr = { fg = c.fg_gutter }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    CursorLineNr = { fg = c.dark5 }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
+    CursorLineNr = { fg = c.purple }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     MatchParen = { fg = c.orange, style = "bold" }, -- The character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg = { fg = c.fg_dark, style = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea = { fg = c.fg_dark }, -- Area for messages and cmdline
@@ -183,7 +183,6 @@ function M.setup(config)
     -- LspDiagnosticsSignHint              = { }, -- Used for "Hint" signs in sign column
   }
 
-
   theme.plugins = {
 
     -- These groups are for the neovim tree-sitter highlights.
@@ -202,7 +201,7 @@ function M.setup(config)
     TSDanger = { fg = c.bg, bg = c.error },
     TSConstructor = { fg = c.red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
-    TSConstant          = { fg = c.yellow };    -- For constants
+    TSConstant = { fg = c.yellow }, -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
@@ -212,12 +211,12 @@ function M.setup(config)
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    TSInclude           = { fg = c.purple };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSInclude = { fg = c.purple }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = c.purple, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
-    TSNamespace         = { fg = c.red };    -- For identifiers referring to modules and namespaces.
+    TSNamespace = { fg = c.red }, -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
     TSOperator = { fg = c.fg }, -- For any operator: `+`, but also `->` and `*` in C.
@@ -237,7 +236,7 @@ function M.setup(config)
     TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-    TSTag               = { fg = c.red };    -- Tags like html tag names.
+    TSTag = { fg = c.red }, -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
     TSTextReference = { fg = c.red }, -- FIXME
@@ -291,6 +290,9 @@ function M.setup(config)
 
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight },
+    TelescopeSelectionCaret = { fg = c.purple },
+    TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
+    TelescopeMatching = { fg = c.cyan },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_light, bg = c.bg_sidebar },
@@ -302,7 +304,7 @@ function M.setup(config)
     NvimTreeIndentMarker = { fg = c.fg_gutter },
     NvimTreeImageFile = { fg = c.fg_sidebar },
     NvimTreeSymlink = { fg = c.purple },
-    NvimTreeFolderName= { fg = c.blue },
+    NvimTreeFolderName = { fg = c.blue },
     LspDiagnosticsError = { fg = c.error },
     LspDiagnosticsWarning = { fg = c.warning },
     LspDiagnosticsInformation = { fg = c.info },
@@ -318,8 +320,8 @@ function M.setup(config)
     WhichKey = { fg = c.yellow },
     WhichKeyGroup = { fg = c.blue },
     WhichKeyDesc = { fg = c.red },
-    WhichKeySeperator = { fg = c.fg_gutter },
-    WhichKeySeparator = { fg = c.fg_gutter },
+    WhichKeySeperator = { fg = c.fg },
+    WhichKeySeparator = { fg = c.fg },
     WhichKeyFloat = { bg = c.bg_sidebar },
     WhichKeyValue = { fg = c.dark5 },
 
