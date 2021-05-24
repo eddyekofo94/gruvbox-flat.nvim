@@ -142,9 +142,16 @@ set -g default-terminal "${TERM}"
 set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'  # undercurl support
 set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'  # underscore colours - needs tmux-3.0
 ```
+
+## 🍭 Extras
+
+Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
+
+<img width="825" alt="Alacritty terminal" src="./media/term-colors.png">
+
 ✅ ### TODO
 - [x]  Generate theme for Kitty
 - [x]  Generate theme for Alacritty
-- [ ]  Add light theme
-- [ ]  Add hard/darker theme
+- [ ]  Add light theme (hopefully one of these days)
+- [x]  Add hard/darker theme (still has some more improvements to go)
 
