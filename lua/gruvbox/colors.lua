@@ -46,6 +46,9 @@ function M.setup(config)
     colors.bg2 = "#1d2021"
     colors.bg = "#282828"
     colors.bg_highlight = "#45403d"
+    colors.cursor = "#32302f"
+    else
+
   end
 
   util.bg = colors.bg
