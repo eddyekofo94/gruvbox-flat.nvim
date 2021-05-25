@@ -149,7 +149,7 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 <img width="825" alt="Alacritty terminal" src="./media/term-colors.png">
 
-✅ ### TODO
+### ✅ TODO
 - [x]  Generate theme for Kitty
 - [x]  Generate theme for Alacritty
 - [ ]  Add light theme (hopefully one of these days)
