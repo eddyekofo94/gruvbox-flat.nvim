@@ -17,7 +17,7 @@ function M.setup(config)
     bg2 = "#282828",
     bg_visual = "#45403d",
     border = "#5a524c",
-    cursor = "#45403d",
+    line_cursor = "#45403d",
     prompt_border = "#ddc7a1",
     bg_highlight = "#5a524c",
     fg = "#d4be98",
@@ -46,9 +46,9 @@ function M.setup(config)
     colors.bg2 = "#1d2021"
     colors.bg = "#282828"
     colors.bg_highlight = "#45403d"
-    colors.cursor = "#32302f"
-    else
-
+    colors.line_cursor = "#32302f"
+    colors.border = "#282828"
+    colors.prompt_border = "#45403d"
   end
 
   util.bg = colors.bg

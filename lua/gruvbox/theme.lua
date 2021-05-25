@@ -21,8 +21,8 @@ function M.setup(config)
     Cursor = { fg = c.bg, bg = c.fg }, -- character under the cursor
     lCursor = { fg = c.bg, bg = c.fg }, -- the character under the cursor when |language-mapping| is used (see 'guicursor')
     CursorIM = { fg = c.bg, bg = c.fg }, -- like Cursor, but used when in IME mode |CursorIM|
-    CursorColumn = { bg = c.cursor }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    CursorLine = { bg = c.cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
+    CursorColumn = { bg = c.line_cursor }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
+    CursorLine = { bg = c.line_cursor }, -- Screen-line at the cursor, when 'cursorline' is set.  Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory = { fg = c.blue }, -- directory names (and other special names in listings)
     DiffAdd = { bg = c.diff.add }, -- diff mode: Added line |diff.txt|
     DiffChange = { bg = c.diff.change }, -- diff mode: Changed line |diff.txt|
@@ -32,7 +32,7 @@ function M.setup(config)
     -- TermCursor  = { }, -- cursor in a focused terminal
     -- TermCursorNC= { }, -- cursor in an unfocused terminal
     ErrorMsg = { fg = c.error }, -- error messages on the command line
-    VertSplit = { fg = c.border }, -- the column separating vertically split windows
+    VertSplit = { fg = c.bg_highlight }, -- the column separating vertically split windows
     Folded = { fg = c.blue, bg = c.fg_gutter }, -- line used for closed folds
     FoldColumn = { bg = c.bg, fg = c.fg_gutter }, -- 'foldcolumn'
     SignColumn = { bg = config.transparent and c.none or c.bg, fg = c.fg_gutter }, -- column where |signs| are displayed
@@ -291,9 +291,10 @@ function M.setup(config)
     -- Telescope
     TelescopeBorder = { fg = c.border_highlight },
     TelescopePromptBorder = { fg = c.prompt_border },
+    TelescopeResultsBorder = { fg = c.bg_highlight },
     TelescopeSelectionCaret = { fg = c.purple },
     TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
-    TelescopeMatching = { fg = c.aqua },
+    TelescopeMatching = { fg = c.blue },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.fg_light, bg = c.bg_sidebar },
