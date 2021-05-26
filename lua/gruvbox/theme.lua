@@ -6,7 +6,7 @@ local M = {}
 ---@param config Config
 ---@return Theme
 function M.setup(config)
-  config = config or require("gruvbox..config")
+  config = config or require("gruvbox.config")
 
   ---@class Theme
   local theme = {}
