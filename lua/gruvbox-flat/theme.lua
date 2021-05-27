@@ -1,5 +1,5 @@
-local util = require("gruvbox.util")
-local colors = require("gruvbox.colors")
+local util = require("gruvbox-flat.util")
+local colors = require("gruvbox-flat.colors")
 
 local M = {}
 

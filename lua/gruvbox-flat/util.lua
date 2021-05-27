@@ -1,4 +1,4 @@
-local hsluv = require("gruvbox.hsluv")
+local hsluv = require("gruvbox-flat.hsluv")
 
 local util = {}
 
