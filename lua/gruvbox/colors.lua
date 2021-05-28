@@ -48,8 +48,6 @@ function M.setup(config)
     colors.bg = "#282828"
     colors.bg_highlight = "#45403d"
     colors.line_cursor = "#32302f"
-    colors.border = "#282828"
-    --colors.fg_gutter = "#a99879"
     colors.prompt_border = "#45403d"
   end
 
