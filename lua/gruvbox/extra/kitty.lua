@@ -20,10 +20,10 @@ function M.kitty(config)
   cursor ${fg}
 
   # Tabs
-  active_tab_background ${bg}
-  active_tab_foreground ${fg}
+  active_tab_background ${red}
+  active_tab_foreground ${bg2}
   inactive_tab_background ${bg_highlight}
-  inactive_tab_foreground ${fg_gutter}
+  inactive_tab_foreground ${fg}
   #tab_bar_background ${black}
 
   # normal
