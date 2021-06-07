@@ -4,14 +4,14 @@ local colors = require("gruvbox.colors").setup(config)
 local gruvbox = {}
 
 gruvbox.normal = {
-  a = { bg = colors.green, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green },
+  a = { bg = colors.blue, fg = colors.black },
+  b = { bg = colors.fg_gutter, fg = colors.blue },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
 gruvbox.insert = {
-  a = { bg = colors.blue, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.blue },
+  a = { bg = colors.green, fg = colors.black },
+  b = { bg = colors.fg_gutter, fg = colors.green },
 }
 
 gruvbox.command = {
