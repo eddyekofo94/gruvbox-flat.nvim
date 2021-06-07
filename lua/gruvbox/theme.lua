@@ -351,6 +351,10 @@ function M.setup(config)
     -- BufferLine
     BufferLineIndicatorSelected = { fg = c.git.change },
     BufferLineFill = { bg = c.black },
+
+    -- Hop
+    HopNextKey = { fg = c.red },
+    HopUnmatched = { fg = c.comment },
   }
 
   if config.hideInactiveStatusline then

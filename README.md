@@ -33,6 +33,7 @@ A dark beautiful Neovim theme written in Lua. [Coming soon] extra themes for Kit
 - [Lualine](https://github.com/hoob3rt/lualine.nvim)
 - [Lightline](https://github.com/itchyny/lightline.vim)
 - [Neogit](https://github.com/TimUntersberger/neogit)
+- [Hop](https://github.com/phaazon/hop.nvim)
 
 ## ⚡️ Requirements
 
