@@ -34,6 +34,7 @@ A dark beautiful Neovim theme written in Lua. [Coming soon] extra themes for Kit
 - [Lightline](https://github.com/itchyny/lightline.vim)
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [Hop](https://github.com/phaazon/hop.nvim)
+- [Bat](https://github.com/sharkdp/bat) follow [this tutorial](https://github.com/sharkdp/bat#adding-new-themes) the .thTheme file is located in [extras](./extras)
 
 ## ⚡️ Requirements
 
