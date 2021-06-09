@@ -35,7 +35,7 @@ A dark beautiful Neovim theme written in Lua. [Coming soon] extra themes for Kit
 - [Neogit](https://github.com/TimUntersberger/neogit)
 - [Hop](https://github.com/phaazon/hop.nvim)
 - [Bat](https://github.com/sharkdp/bat) follow [this tutorial](https://github.com/sharkdp/bat#adding-new-themes) the .thTheme file is located in [extras](./extras)
-- [Delta](https://github.com/dandavison/delta#installation)
+- [Delta](https://github.com/dandavison/delta)
 
 ## ⚡️ Requirements
 
