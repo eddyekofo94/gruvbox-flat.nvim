@@ -1,0 +1,31 @@
+# Add this to your .gitconfig
+# NOTE: The colours are the most important but adjust other configs to your own liking
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[delta]
+    plus-style = "syntax #32361a"
+    minus-style = "syntax #3c1f1e"
+    features = side-by-side line-numbers decorations
+    syntax-theme = Gruvbox Material Dark
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold ul
+    file-decoration-style = none
+    hunk-header-decoration-style = "#5a524c" box ul
+
+[delta "line-numbers"]
+    line-numbers-plus-style = "#6c782e"
+    line-numbers-minus-style = "#c14a4a"
+    line-numbers-left-style = "#5a524c"
+    line-numbers-right-style = "#5a524c"
+    line-numbers-zero-style = "#5a524c"
+
