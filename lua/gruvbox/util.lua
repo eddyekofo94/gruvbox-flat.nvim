@@ -174,9 +174,12 @@ end
 
 ---@param colors ColorScheme
 function util.terminal(colors)
+  local dark = colors.comment
   -- dark
   vim.g.terminal_color_0 = colors.black
   vim.g.terminal_color_8 = colors.bg2
+  vim.g.terminal_color_0 = dark
+  vim.g.terminal_color_8 = dark
 
   -- light
   vim.g.terminal_color_7 = colors.fg_dark
