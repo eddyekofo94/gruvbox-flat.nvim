@@ -174,8 +174,8 @@ function util.terminal(colors)
   vim.g.terminal_color_5 = colors.purple
   vim.g.terminal_color_13 = colors.purple
 
-  vim.g.terminal_color_6 = colors.cyan
-  vim.g.terminal_color_14 = colors.cyan
+  vim.g.terminal_color_6 = colors.aqua
+  vim.g.terminal_color_14 = colors.aqua
 
   if vim.o.background == "light" then
     for i = 0, 15, 1 do

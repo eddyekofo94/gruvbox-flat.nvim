@@ -28,9 +28,10 @@ function M.setup(config)
     fg_gutter = "#5a524c",
     dark5 = "#5a524c",
     blue = "#7daea3",
-    cyan = "#89b482",
+    aqua = "#89b482",
     purple = "#d3869b",
     orange = "#e78a4e",
+    orange2 = "#c35e0a";
     yellow = "#d8a657",
     yellow2 = "#b47109",
     bg_yellow = "#a96b2c",
@@ -85,7 +86,7 @@ function M.setup(config)
   colors.error = colors.red1
   colors.warning = colors.yellow
   colors.info = colors.blue
-  colors.hint = colors.cyan
+  colors.hint = colors.aqua
 
   util.color_overrides(colors, config)
 

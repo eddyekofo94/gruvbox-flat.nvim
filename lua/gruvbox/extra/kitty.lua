@@ -33,7 +33,7 @@ function M.kitty(config)
   color3 ${yellow}
   color4 ${blue}
   color5 ${purple}
-  color6 ${cyan}
+  color6 ${aqua}
   color7 ${fg_dark}
 
   # bright
@@ -43,7 +43,7 @@ function M.kitty(config)
   color11 ${yellow}
   color12 ${blue}
   color13 ${purple}
-  color14 ${cyan}
+  color14 ${aqua}
   color15 ${fg}
 
   # extended colors

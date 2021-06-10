@@ -97,10 +97,10 @@ function M.setup(config)
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
     Operator = { fg = c.red }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
+    Keyword = { fg = c.aqua, style = config.keywordStyle }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
-    PreProc = { fg = c.cyan }, -- (preferred) generic Preprocessor
+    PreProc = { fg = c.aqua }, -- (preferred) generic Preprocessor
     -- Include       = { }, --  preprocessor #include
     -- Define        = { }, --   preprocessor #define
     -- Macro         = { }, --    same as Define
@@ -126,7 +126,7 @@ function M.setup(config)
     -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
     Error = { fg = c.error }, -- (preferred) any erroneous construct
-    Todo = { bg = c.blue, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+    Todo = { bg = c.yellow, fg = c.bg }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
     qfLineNr = { fg = c.dark5 },
     qfFileName = { fg = c.blue },
@@ -199,19 +199,19 @@ function M.setup(config)
     TSNote = { fg = c.bg, bg = c.info },
     TSWarning = { fg = c.bg, bg = c.warning },
     TSDanger = { fg = c.bg, bg = c.error },
-    TSConstructor = { fg = c.red }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+    TSConstructor = { fg = c.aqua }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     TSConstant = { fg = c.yellow }, -- For constants
     -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    TSField = { fg = c.cyan }, -- For fields.
+    TSField = { fg = c.aqua }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    TSInclude = { fg = c.purple }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    TSInclude = { fg = c.blue }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = c.purple, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
@@ -223,9 +223,9 @@ function M.setup(config)
     TSParameter = { fg = c.red }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.red }, -- Same as `TSField`.
-    TSPunctDelimiter = { fg = c.fg }, -- For delimiters ie: `.`
-    TSPunctBracket = { fg = c.fg_dark }, -- For brackets and parens.
-    TSPunctSpecial = { fg = c.fg }, -- For special punctutation that does not fall in the catagories before.
+    TSPunctDelimiter = { fg = c.red }, -- For delimiters ie: `.`
+    TSPunctBracket = { fg = c.orange2 }, -- For brackets and parens.
+    TSPunctSpecial = { fg = c.orange2 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.orange }, -- For regexes.
@@ -234,7 +234,7 @@ function M.setup(config)
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
     TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
-    TSVariableBuiltin = { fg = c.red }, -- Variable names that are defined by the languages, like `this` or `self`.
+    TSVariableBuiltin = { fg = c.aqua }, -- Variable names that are defined by the languages, like `this` or `self`.
 
     TSTag = { fg = c.red }, -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
