@@ -36,7 +36,6 @@ function M.setup(config)
     yellow2 = "#b47109",
     bg_yellow = "#a96b2c",
     green = "#a9b665",
-    aqua = "#8ec07c",
     red = "#ea6962",
     red1 = "#c14a4a",
     black = "#1d2021",
