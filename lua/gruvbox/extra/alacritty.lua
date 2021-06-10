@@ -31,7 +31,7 @@ colors:
     yellow:  '${yellow}'
     blue:    '${blue}'
     magenta: '${purple}'
-    cyan:    '${cyan}'
+    aqua:    '${aqua}'
     white:   '${fg_dark}'
 
   # Bright colors
@@ -42,7 +42,7 @@ colors:
     yellow:  '${yellow}'
     blue:    '${blue}'
     magenta: '${purple}'
-    cyan:    '${cyan}'
+    aqua:    '${aqua}'
     white:   '${fg}'
 
   indexed_colors:
