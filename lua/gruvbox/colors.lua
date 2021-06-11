@@ -31,7 +31,6 @@ function M.setup(config)
     aqua = "#89b482",
     purple = "#d3869b",
     orange = "#e78a4e",
-    orange2 = "#c35e0a";
     yellow = "#d8a657",
     yellow2 = "#b47109",
     bg_yellow = "#a96b2c",

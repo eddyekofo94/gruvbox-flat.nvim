@@ -224,8 +224,8 @@ function M.setup(config)
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.red }, -- Same as `TSField`.
     TSPunctDelimiter = { fg = c.red }, -- For delimiters ie: `.`
-    TSPunctBracket = { fg = c.orange2 }, -- For brackets and parens.
-    TSPunctSpecial = { fg = c.orange2 }, -- For special punctutation that does not fall in the catagories before.
+    TSPunctBracket = { fg = util.darken(c.orange, 0.85) }, -- For brackets and parens.
+    TSPunctSpecial = { fg = util.darken(c.orange, 0.85) }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.orange }, -- For regexes.
