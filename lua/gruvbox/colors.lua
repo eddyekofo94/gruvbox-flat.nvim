@@ -55,7 +55,7 @@ function M.setup(config)
     colors.bg = "#1d2021"
     colors.bg2 ="#17191a"
     colors.bg_highlight = "#3c3836"
-    colors.line_cursor = "#282828"
+    colors.line_cursor = util.lighten(colors.bg, 0.97) -- util.darken("#282828", 0.90)
     colors.border = colors.bg_highlight
     colors.prompt_border = "#45403d"
     colors.bg_visual = "#3c3836"
@@ -78,7 +78,7 @@ function M.setup(config)
   }
 
   colors.git.ignore = colors.fg_gutter
-  colors.black = util.darken(colors.bg, 0.8, "#1d2021")
+  colors.black = util.darken(colors.bg, 0.8, "#000000")
   colors.border_highlight = colors.border
 
   -- Popups and statusline always get a dark background
