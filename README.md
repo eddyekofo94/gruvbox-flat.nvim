@@ -96,6 +96,13 @@ vim.g.gruvbox_flat_style = "dark"
 ```
 <img width="1680" alt="rust code" src="./media/gruvbox-dark.png">
 
+To enable harder mode
+```lua
+vim.g.gruvbox_flat_style = "hard"
+
+```
+<img width="1680" alt="harder" src="./media/gruvbox-harder.png">
+
 ## ⚙️ Configuration
 
 > ❗️ configuration needs to be set **BEFORE** loading the color scheme with `colorscheme gruvbox-flat`
@@ -149,6 +156,7 @@ set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{25
 ## 🍭 Extras
 
 Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](extras/). To use them, refer to their respective documentation.
+- To generate the configs `:luafile /lua/gruvbox/extra/init.lua`
 
 <img width="825" alt="Alacritty terminal" src="./media/term-colors.png">
 
