@@ -90,8 +90,8 @@ function M.setup(config)
   colors.bg_sidebar = config.darkSidebar and colors.bg2 or colors.bg
   colors.bg_float = config.darkFloat and colors.bg2 or colors.bg
 
-  colors.bg_search = colors.bg_highlight
-  colors.fg_search = colors.fg
+  colors.bg_search = colors.bg_highlight -- Disabled
+  colors.fg_search = colors.fg -- Disabled
   colors.fg_sidebar = colors.fg_dark
 
   colors.error = colors.red1
