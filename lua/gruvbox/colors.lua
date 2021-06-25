@@ -13,6 +13,7 @@ function M.setup(config)
 
   colors = {
     none = "NONE",
+    reverse = "reverse",
     bg = "#32302f",
     bg2 = "#282828",
     bg_visual = "#45403d",
@@ -89,8 +90,8 @@ function M.setup(config)
   colors.bg_sidebar = config.darkSidebar and colors.bg2 or colors.bg
   colors.bg_float = config.darkFloat and colors.bg2 or colors.bg
 
-  colors.bg_search = colors.yellow
-  colors.fg_search = colors.bg2
+  colors.bg_search = colors.bg_highlight
+  colors.fg_search = colors.fg
   colors.fg_sidebar = colors.fg_dark
 
   colors.error = colors.red1
