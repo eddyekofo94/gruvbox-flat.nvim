@@ -164,6 +164,8 @@ Extra color configs for **Kitty**, and **Alacritty** can be found in [extras](ex
 
 <img width="825" alt="Alacritty terminal" src="./media/term-colors.png">
 
+### Other themes by me:
+- [Bogster](https://github.com/eddyekofo94/bogster.nvim)
 ### ✅ TODO
 - [x]  Generate theme for Kitty
 - [x]  Generate theme for Alacritty
