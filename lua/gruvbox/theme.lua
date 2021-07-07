@@ -57,7 +57,7 @@ function M.setup(config)
     PmenuThumb = { bg = c.fg_gutter }, -- Popup menu: Thumb of the scrollbar.
     Question = { fg = c.blue }, -- |hit-enter| prompt and yes/no questions
     QuickFixLine = { bg = c.bg_visual, style = "bold" }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
-    Search = {style = "reverse"}, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
+    Search = { style = "reverse" }, -- Last search pattern highlighting (see 'hlsearch').  Also used for similar items that need to stand out.
     IncSearch = { bg = c.orange, fg = c.black }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
     SpecialKey = { fg = c.fg_gutter }, -- Unprintable characters: text displayed differently from what it really is.  But not 'listchars' whitespace. |hl-Whitespace|
     SpellBad = { sp = c.error, style = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
@@ -70,7 +70,7 @@ function M.setup(config)
     TabLineFill = { bg = c.black }, -- tab pages line, where there are no labels
     TabLineSel = { fg = c.black, bg = c.blue }, -- tab pages line, active tab page label
     Title = { fg = c.blue, style = "bold" }, -- titles for output from ":set all", ":autocmd" etc.
-    Visual = {style = "reverse"}, -- Visual mode selection
+    Visual = { style = "reverse" }, -- Visual mode selection
     VisualNOS = { bg = c.bg_visual }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg = { fg = c.warning }, -- warning messages
     Whitespace = { fg = c.fg_gutter }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
@@ -219,7 +219,7 @@ function M.setup(config)
     TSNamespace = { fg = c.red }, -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = {fg = util.darken(c.orange, 0.85) }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator = { fg = util.darken(c.orange, 0.85) }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.red }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.red }, -- Same as `TSField`.
@@ -298,13 +298,13 @@ function M.setup(config)
 
     -- NvimTree
     NvimTreeNormal = { fg = c.tree_normal, bg = c.bg_sidebar },
-    NvimTreeFolderIcon = {fg = c.comment},
+    NvimTreeFolderIcon = { fg = c.comment },
     NvimTreeRootFolder = { fg = c.fg_light, style = "bold" },
     NvimTreeSymlink = { fg = c.blue },
-    NvimTreeFolderName = { fg = c.tree_normal},
-    NvimTreeEmptyFolderName = { fg = c.comment},
-    NvimTreeOpenedFolderName = {fg = c.purple},
-    NvimTreeOpenedFile = { fg = c.purple}, -- TODO: not working
+    NvimTreeFolderName = { fg = c.tree_normal },
+    NvimTreeEmptyFolderName = { fg = c.comment },
+    NvimTreeOpenedFolderName = { fg = c.purple },
+    NvimTreeOpenedFile = { fg = c.purple }, -- TODO: not working
     NvimTreeGitDirty = { fg = c.yellow2 },
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
@@ -337,8 +337,8 @@ function M.setup(config)
     DiagnosticInformation = { fg = c.info },
     DiagnosticHint = { fg = c.hint },
 
-    LspFloatWinNormal = { bg = c.border },
-    LspFloatWinBorder = { fg = c.border_highlight },
+    LspFloatWinNormal = { bg = c.bg_float },
+    LspFloatWinBorder = { fg = c.prompt_border },
     LspSagaBorderTitle = { fg = c.aqua },
     LspSagaHoverBorder = { fg = c.blue },
     LspSagaRenameBorder = { fg = c.green },
