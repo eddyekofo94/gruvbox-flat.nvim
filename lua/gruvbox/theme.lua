@@ -297,11 +297,11 @@ function M.setup(config)
     TelescopeMatching = { fg = c.blue },
 
     -- NvimTree
-    NvimTreeNormal = { fg = c.tree_normal, bg = c.bg_sidebar },
+    NvimTreeNormal = { fg = c.fg_dark, bg = c.bg_sidebar },
     NvimTreeFolderIcon = { fg = c.comment },
     NvimTreeRootFolder = { fg = c.fg_light, style = "bold" },
     NvimTreeSymlink = { fg = c.blue },
-    NvimTreeFolderName = { fg = c.tree_normal },
+    NvimTreeFolderName = { fg = c.blue },
     NvimTreeEmptyFolderName = { fg = c.comment },
     NvimTreeOpenedFolderName = { fg = c.purple },
     NvimTreeOpenedFile = { fg = c.purple }, -- TODO: not working
@@ -338,7 +338,7 @@ function M.setup(config)
     DiagnosticHint = { fg = c.hint },
 
     LspFloatWinNormal = { bg = c.bg_float },
-    LspFloatWinBorder = { fg = c.prompt_border },
+    LspFloatWinBorder = { fg = c.border },
     LspSagaBorderTitle = { fg = c.aqua },
     LspSagaHoverBorder = { fg = c.blue },
     LspSagaRenameBorder = { fg = c.green },
