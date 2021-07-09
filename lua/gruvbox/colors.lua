@@ -73,9 +73,9 @@ function M.setup(config)
   }
 
   colors.gitSigns = {
-    add = util.brighten(colors.gitSigns.add, 0.2),
-    change = util.brighten(colors.gitSigns.change, 0.2),
-    delete = util.brighten(colors.gitSigns.delete, 0.2),
+    add = util.darken(colors.gitSigns.add, 0.85),
+    change = util.darken(colors.gitSigns.change, 0.85),
+    delete = util.darken(colors.gitSigns.delete, 0.85),
   }
 
   colors.git.ignore = colors.fg_gutter
