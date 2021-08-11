@@ -210,20 +210,52 @@ function util.load(theme)
   end, 0)
 end
 
+---@param colors ColorScheme
+---@param color_spec String
+function util.new_color(colors, color_spec)
+  if string.sub(color_spec, 1, 1) == "#" then
+    -- hex override
+    return color_spec
+  else
+    -- another group
+    if not colors[color_spec] then error("Color " .. color_spec .. " does not exist") end
+    return colors[color_spec]
+  end
+end
+
 ---@param config Config
 ---@param colors ColorScheme
 function util.color_overrides(colors, config)
   if type(config.colors) == "table" then
     for key, value in pairs(config.colors) do
       if not colors[key] then error("Color " .. key .. " does not exist") end
-      if string.sub(value, 1, 1) == "#" then
-        -- hex override
-        colors[key] = value
-      else
-        -- another group
-        if not colors[value] then error("Color " .. value .. " does not exist") end
-        colors[key] = colors[value]
-      end
+      colors[key] = util.new_color(colors, value)
+    end
+  end
+end
+
+---@param config Config
+---@param theme Theme
+function util.theme_overrides(theme, config)
+  if type(config.theme) ~= "table" then return nil end
+
+  for theme_name, theme_override in pairs(config.theme) do
+    if type(theme_override) ~= "table" then
+      error("A theme override for " .. theme_name
+            .. " should be a table but was " .. type(theme_override))
+    end
+
+    local theme_to_override;
+    if theme.base[theme_name] then
+      theme_to_override = theme.base[theme_name]
+    elseif theme.plugins[theme_name] then
+      theme_to_override = theme.plugins[theme_name]
+    else
+      error("Theme " .. theme_name .. " does not exist")
+    end
+
+    for field_name, field_color in pairs(theme_override) do
+      theme_to_override[field_name] = util.new_color(theme.colors, field_color)
     end
   end
 end

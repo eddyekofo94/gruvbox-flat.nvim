@@ -369,6 +369,8 @@ function M.setup(config)
     end
   end
 
+  util.theme_overrides(theme, config)
+
   return theme
 end
 
