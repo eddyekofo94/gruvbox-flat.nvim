@@ -289,9 +289,9 @@ function M.setup(config)
     GitSignsDelete = { fg = c.gitSigns.delete }, -- diff mode: Deleted line |diff.txt|
 
     -- Telescope
-    TelescopeBorder = { fg = c.border_highlight },
-    TelescopePromptBorder = { fg = c.prompt_border },
-    TelescopeResultsBorder = { fg = c.bg_highlight },
+    TelescopeBorder = { fg = util.darken(c.fg, 0.75) },
+    TelescopePromptBorder = { fg = c.fg_light },
+    TelescopeResultsBorder = { fg = util.darken(c.fg, 0.75) },
     TelescopeSelectionCaret = { fg = c.purple },
     TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
     TelescopeMatching = { fg = c.blue },
