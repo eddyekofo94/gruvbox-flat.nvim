@@ -353,8 +353,11 @@ function M.setup(config)
     BufferLineFill = { bg = c.black },
 
     -- Hop
-    HopNextKey = { fg = c.red },
+    HopNextKey = { fg = c.red, style = "bold" },
+	HopNextKey1 = { fg = c.blue, style = "bold" },
+	HopNextKey2 = { fg = util.darken(c.blue, 0.80) },
     HopUnmatched = { fg = c.comment },
+
   }
 
   if config.hideInactiveStatusline then
