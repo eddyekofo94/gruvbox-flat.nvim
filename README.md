@@ -120,6 +120,7 @@ vim.g.gruvbox_flat_style = "hard"
 | gruvbox_dark_sidebar             | `true`  | Sidebar like windows like `NvimTree` get a darker background                                                                                                    |
 | gruvbox_dark_float               | `true`  | Float windows like the lsp diagnostics windows get a darker background.                                                                                         |
 | gruvbox_colors                   | `{}`    | You can override specific color groups to use other groups or a hex color                                                                                       |
+| gruvbox_theme                    | `{}`    | You can override specific highlight groups to use other color groups or a hex color                                                                             |
 
 ```lua
 -- Example config in Lua
@@ -128,6 +129,9 @@ vim.g.gruvbox_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
 vim.g.gruvbox_colors = { hint = "orange", error = "#ff0000" }
+
+-- Change the TabLineSel highlight group (used by barbar.nvim) to the "orange" color
+vim.g.gruvbox_theme = { TabLineSel = { bg = "orange" } }
 
 -- Load the colorscheme
 vim.cmd[[colorscheme gruvbox-flat]]
