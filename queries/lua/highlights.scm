@@ -1,1 +1,2 @@
-(self) @variable.builtin
+((identifier) @variable.builtin
+ (#match? @variable.builtin "self"))
