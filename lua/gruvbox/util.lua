@@ -208,6 +208,33 @@ function util.load(theme)
     util.syntax(theme.plugins)
     util.autocmds(theme.config)
   end, 0)
+
+  -- link to new tree-sitter highlight groups
+  if vim.fn.has('nvim-0.8.0') == 1 then
+    vim.cmd('highlight! link @constant TSConstant')
+    vim.cmd('highlight! link @constructor TSConstructor')
+    vim.cmd('highlight! link @field TSField')
+    vim.cmd('highlight! link @include TSInclude')
+    vim.cmd('highlight! link @keyword TSKeyword')
+    vim.cmd('highlight! link @keyword.function TSKeywordFunction')
+    vim.cmd('highlight! link @label TSLabel')
+    vim.cmd('highlight! link @namespace TSNamespace')
+    vim.cmd('highlight! link @operator TSOperator')
+    vim.cmd('highlight! link @parameter TSParameter')
+    vim.cmd('highlight! link @property TSProperty')
+    vim.cmd('highlight! link @punctuation.bracket TSPunctBracket')
+    vim.cmd('highlight! link @punctuation.delimiter TSPunctDelimiter')
+    vim.cmd('highlight! link @punctuation.special TSPunctSpecial')
+    vim.cmd('highlight! link @string.escape TSStringEscape')
+    vim.cmd('highlight! link @string.regex TSStringRegex')
+    vim.cmd('highlight! link @tag TSTag')
+    vim.cmd('highlight! link @text.danger TSDanger')
+    vim.cmd('highlight! link @text.note TSNote')
+    vim.cmd('highlight! link @text.reference TSTextReference')
+    vim.cmd('highlight! link @text.warning TSWarning')
+    vim.cmd('highlight! link @variable TSVariable')
+    vim.cmd('highlight! link @variable.builtin TSVariableBuiltin')
+  end
 end
 
 ---@param colors ColorScheme
