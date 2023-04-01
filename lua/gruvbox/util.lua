@@ -203,11 +203,9 @@ function util.load(theme)
   util.syntax(theme.base)
 
   -- load syntax for plugins and terminal async
-  vim.defer_fn(function()
-    util.terminal(theme.colors)
-    util.syntax(theme.plugins)
-    util.autocmds(theme.config)
-  end, 0)
+  util.terminal(theme.colors)
+  util.syntax(theme.plugins)
+  util.autocmds(theme.config)
 
   -- link to new tree-sitter highlight groups
   if vim.fn.has('nvim-0.8.0') == 1 then
