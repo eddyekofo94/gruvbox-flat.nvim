@@ -358,6 +358,10 @@ function M.setup(config)
 	HopNextKey2 = { fg = util.darken(c.blue, 0.80) },
     HopUnmatched = { fg = c.comment },
 
+		-- ChooseWin
+		ChooseWinOther = { bg = c.bg_statusline },
+		ChooseWinLabelCurrent = { bg = util.lighten(c.blue, 0.7), fg = c.black, style = "bold" },
+		ChooseWinLabel = { bg = util.darken(c.blue, 0.9), fg = util.lighten(c.black, 0.8) },
   }
 
   if config.hideInactiveStatusline then
