@@ -55,6 +55,7 @@ function M.setup(config)
   elseif vim.g.gruvbox_flat_style == "hard" then
     colors.bg = "#1d2021"
     colors.bg2 ="#17191a"
+    colors.fg = colors.fg_dark
     colors.bg_highlight = "#3c3836"
     colors.line_cursor = util.lighten(colors.bg, 0.97) -- util.darken("#282828", 0.90)
     colors.border = colors.bg_highlight

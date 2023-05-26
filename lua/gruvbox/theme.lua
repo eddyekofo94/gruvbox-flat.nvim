@@ -82,21 +82,21 @@ function M.setup(config)
     -- default,
     -- Uncomment and edit if you want more specific syntax highlighting.
 
-    Constant = { fg = c.orange }, -- (preferred) any constant
+    Constant = { fg = c.purple }, -- (preferred) any constant
     String = { fg = c.green }, --   a string constant: "this is a string"
     Character = { fg = c.green }, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
-    -- Boolean       = { }, --  a boolean constant: TRUE, false
+    Boolean       = { fg = c.red}, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
-    Identifier = { fg = c.red, style = config.variableStyle }, -- (preferred) any variable name
+    Identifier = { fg = c.fg, style = config.variableStyle }, -- (preferred) any variable name
     Function = { fg = c.blue, style = config.functionStyle }, -- function name (also: methods for classes)
 
     Statement = { fg = c.purple }, -- (preferred) any statement
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.red }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.orange }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.aqua, style = config.keywordStyle }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
@@ -111,7 +111,7 @@ function M.setup(config)
     -- Structure     = { }, --  struct, union, enum, etc.
     -- Typedef       = { }, --  A typedef
 
-    Special = { fg = c.red }, -- (preferred) any special symbol
+    Special = { fg = c.orange }, -- (preferred) any special symbol
     -- SpecialChar   = { }, --  special character in a constant
     -- Tag           = { }, --    you can use CTRL-] on this
     -- Delimiter     = { }, --  character that needs attention
@@ -185,70 +185,70 @@ function M.setup(config)
 
   theme.plugins = {
 
-    -- These groups are for the neovim tree-sitter highlights.
-    -- As of writing, tree-sitter support is a WIP, group names may change.
-    -- By default, most of these groups link to an appropriate Vim group,
-    -- TSError -> Error for example, so you do not have to define these unless
-    -- you explicitly want to support Treesitter's improved syntax awareness.
+    -- -- These groups are for the neovim tree-sitter highlights.
+    -- -- As of writing, tree-sitter support is a WIP, group names may change.
+    -- -- By default, most of these groups link to an appropriate Vim group,
+    -- -- TSError -> Error for example, so you do not have to define these unless
+    -- -- you explicitly want to support Treesitter's improved syntax awareness.
 
-    -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-    -- TSAttribute         = { };    -- (unstable) TODO: docs
-    -- TSBoolean           = { };    -- For booleans.
-    -- TSCharacter         = { };    -- For characters.
-    -- TSComment           = { };    -- For comment blocks.
+    -- -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    -- -- TSAttribute         = { };    -- (unstable) TODO: docs
+    TSBoolean           = { fg = c.red };    -- For booleans.
+    -- -- TSCharacter         = { };    -- For characters.
+    -- -- TSComment           = { };    -- For comment blocks.
     TSNote = { fg = c.bg, bg = c.info },
     TSWarning = { fg = c.bg, bg = c.warning },
     TSDanger = { fg = c.bg, bg = c.error },
     TSConstructor = { fg = c.aqua }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-    -- TSConditional       = { };    -- For keywords related to conditionnals.
+    -- -- TSConditional       = { };    -- For keywords related to conditionnals.
     TSConstant = { fg = c.yellow }, -- For constants
-    -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
-    -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
-    -- TSError             = { };    -- For syntax/parser errors.
-    -- TSException         = { };    -- For exception related keywords.
-    TSField = { fg = c.aqua }, -- For fields.
-    -- TSFloat             = { };    -- For floats.
-    -- TSFunction          = { };    -- For function (calls and definitions).
-    -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
-    -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-    TSInclude = { fg = c.blue }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
+    -- -- TSConstBuiltin      = { };    -- For constant that are built in the language: `nil` in Lua.
+    -- -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
+    -- -- TSError             = { };    -- For syntax/parser errors.
+    -- -- TSException         = { };    -- For exception related keywords.
+    -- TSField = { fg = c.aqua }, -- For fields.
+    -- -- TSFloat             = { };    -- For floats.
+    -- -- TSFunction          = { };    -- For function (calls and definitions).
+    -- -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
+    -- -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
+    -- TSInclude = { fg = c.blue }, -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
     TSKeyword = { fg = c.purple, style = config.keywordStyle }, -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = c.purple, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.blue }, -- For labels: `label:` in C and `:label:` in Lua.
-    -- TSMethod            = { };    -- For method calls and definitions.
+    -- -- TSMethod            = { };    -- For method calls and definitions.
     TSNamespace = { fg = c.red }, -- For identifiers referring to modules and namespaces.
-    -- TSNone              = { };    -- TODO: docs
-    -- TSNumber            = { };    -- For all numbers
-    TSOperator = {fg = util.darken(c.orange, 0.85) }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { fg = c.red }, -- For parameters of a function.
-    -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = c.red }, -- Same as `TSField`.
+    -- -- TSNone              = { };    -- TODO: docs
+    -- -- TSNumber            = { };    -- For all numbers
+    TSOperator = {fg = c.orange}, -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = c.orange }, -- For parameters of a function.
+    -- -- TSParameterReference= { };    -- For references to parameters of a function.
+    TSProperty = { fg = c.fg }, -- Same as `TSField`.
     TSPunctDelimiter = { fg = c.red }, -- For delimiters ie: `.`
     TSPunctBracket = { fg = util.darken(c.orange, 0.85) }, -- For brackets and parens.
     TSPunctSpecial = { fg = util.darken(c.orange, 0.85) }, -- For special punctutation that does not fall in the catagories before.
-    -- TSRepeat            = { };    -- For keywords related to loops.
-    -- TSString            = { };    -- For strings.
+    -- -- TSRepeat            = { };    -- For keywords related to loops.
+    -- -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.orange }, -- For regexes.
     TSStringEscape = { fg = c.red }, -- For escape characters within a string.
-    -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
-    -- TSType              = { };    -- For types.
-    -- TSTypeBuiltin       = { };    -- For builtin types.
+    -- -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
+    -- -- TSType              = { };    -- For types.
+    -- -- TSTypeBuiltin       = { };    -- For builtin types.
     TSVariable = { style = config.variableStyle }, -- Any variable name that does not have another highlight.
     TSVariableBuiltin = { fg = c.aqua }, -- Variable names that are defined by the languages, like `this` or `self`.
 
-    TSTag = { fg = c.red }, -- Tags like html tag names.
-    -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
-    -- TSText              = { };    -- For strings considered text in a markup language.
-    TSTextReference = { fg = c.red }, -- FIXME
-    -- TSEmphasis          = { };    -- For text to be represented with emphasis.
-    -- TSUnderline         = { };    -- For text to be represented with an underline.
-    -- TSStrike            = { };    -- For strikethrough text.
-    -- TSTitle             = { };    -- Text that is part of a title.
-    -- TSLiteral           = { };    -- Literal text.
-    -- TSURI               = { };    -- Any URI like a link or email.
+    TSTag = { fg = c.fg }, -- Tags like html tag names.
+    -- -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
+    -- -- TSText              = { };    -- For strings considered text in a markup language.
+    TSTextReference = { fg = c.fg }, -- FIXME
+    -- -- TSEmphasis          = { };    -- For text to be represented with emphasis.
+    -- -- TSUnderline         = { };    -- For text to be represented with an underline.
+    -- -- TSStrike            = { };    -- For strikethrough text.
+    -- -- TSTitle             = { };    -- Text that is part of a title.
+    -- -- TSLiteral           = { };    -- Literal text.
+    -- -- TSURI               = { };    -- Any URI like a link or email.
 
     -- Lua
-    -- luaTSProperty = { fg = c.red }, -- Same as `TSField`.
+    luaTSProperty = { fg = c.red }, -- Same as `TSField`.
 
     -- LspTrouble
     LspTroubleText = { fg = c.fg_dark },
@@ -290,11 +290,19 @@ function M.setup(config)
 
     -- Telescope
     TelescopeBorder = { fg = util.darken(c.fg, 0.75) },
-    TelescopePromptBorder = { fg = c.fg_light },
-    TelescopeResultsBorder = { fg = util.darken(c.fg, 0.75) },
-    TelescopeSelectionCaret = { fg = c.purple },
-    TelescopeSelection = { fg = c.purple, bg = c.bg_highlight },
-    TelescopeMatching = { fg = c.blue },
+    -- TelescopeBorder          = { fg = c.bg_visual, bg = c.bg },
+    TelescopeNormal          = { bg = c.bg },
+    TelescopePreviewBorder   = { fg = c.bg, bg = c.bg },
+    TelescopePreviewNormal   = { bg = c.bg },
+    TelescopePreviewTitle    = { fg = c.bg, bg = c.green },
+    TelescopePromptBorder    = { fg = c.bg_visual, bg = c.bg_visual },
+    TelescopePromptNormal    = { fg = c.fg, bg = c.bg_visual },
+    TelescopePromptPrefix    = { fg = c.red, bg = c.bg_visual},
+    TelescopePromptTitle     = { fg = c.bg, bg = c.red },
+    TelescopeResultsBorder   = { fg = c.bg, bg = c.bg },
+    TelescopeResultsNormal   = { bg = c.bg },
+    TelescopeResultsTitle    = { fg = c.bg, bg = c.bg },
+
 
     -- NvimTree
     NvimTreeNormal = { fg = c.tree_normal, bg = c.bg_sidebar },
