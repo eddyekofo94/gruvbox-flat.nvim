@@ -57,6 +57,18 @@ Plug 'eddyekofo94/gruvbox-flat.nvim'
 use 'eddyekofo94/gruvbox-flat.nvim'
 ```
 
+[lazy.nvim](https://github.com/folke/lazy.nvim)
+```
+return {
+    'eddyekofo94/gruvbox-flat.nvim',
+    priority = 1000,
+    enabled = true,
+    config = function()
+        vim.cmd([[colorscheme gruvbox-flat]])
+    end,
+}
+```
+
 ## 🚀 Usage
 
 Enable the colorscheme:
