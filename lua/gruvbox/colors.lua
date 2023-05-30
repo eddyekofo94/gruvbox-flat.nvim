@@ -64,6 +64,25 @@ function M.setup(config)
     colors.comment = "#6a635d"
   end
 
+  if vim.g.gruvbox_flat_style == "light" then
+    colors.bg2 = "#ebdbb2"
+    colors.bg = "#f2e5bc"
+    colors.border = "#d4be98"
+    colors.fg_gutter = "#d4be98"
+    colors.dark5 = "#d4be98"
+    colors.bg_highlight = "#d4be98"
+    colors.fg = "#5a524c"
+    colors.fg_dark = "#5a524c"
+    colors.fg_light = "#5a524c"
+    colors.bg_visual = "#ddc7a1"
+    colors.line_cursor = "#ddc7a1"
+    colors.prompt_border = "#5a524c"
+    colors.blue = "#45707a"
+    colors.aqua = "#4C7A5d"
+    colors.purple = "#945e80"
+    colors.green = "#6C782e"
+ end
+
   util.bg = colors.bg
 
   colors.diff = {
