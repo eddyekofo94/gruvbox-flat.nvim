@@ -86,7 +86,7 @@ function M.setup(config)
     String = { fg = c.green }, --   a string constant: "this is a string"
     Character = { fg = c.green }, --  a character constant: 'c', '\n'
     -- Number        = { }, --   a number constant: 234, 0xff
-    Boolean       = { fg = c.red}, --  a boolean constant: TRUE, false
+    Boolean = { fg = c.red }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
 
     Identifier = { fg = c.fg, style = config.variableStyle }, -- (preferred) any variable name
@@ -167,10 +167,10 @@ function M.setup(config)
     LspDiagnosticsVirtualTextInformation = { bg = util.darken(c.info, 0.1), fg = c.info }, -- Used for "Information" diagnostic virtual text
     LspDiagnosticsVirtualTextHint = { bg = util.darken(c.hint, 0.1), fg = c.hint }, -- Used for "Hint" diagnostic virtual text
 
-    LspDiagnosticsUnderlineError = { style = "undercurl", sp = c.error }, -- Used to underline "Error" diagnostics
-    LspDiagnosticsUnderlineWarning = { style = "undercurl", sp = c.warning }, -- Used to underline "Warning" diagnostics
-    LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = c.info }, -- Used to underline "Information" diagnostics
-    LspDiagnosticsUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
+    DiagnosticUnderlineError = { style = "undercurl", sp = c.error }, -- Used to underline "Error" diagnostics
+    DiagnosticUnderlineWarn = { style = "undercurl", sp = c.warning }, -- Used to underline "Warning" diagnostics
+    DiagnosticUnderlineInfo = { style = "undercurl", sp = c.info }, -- Used to underline "Information" diagnostics
+    DiagnosticUnderlineHint = { style = "undercurl", sp = c.hint }, -- Used to underline "Hint" diagnostics
 
     -- LspDiagnosticsFloatingError         = { }, -- Used to color "Error" diagnostic messages in diagnostics float
     -- LspDiagnosticsFloatingWarning       = { }, -- Used to color "Warning" diagnostic messages in diagnostics float
@@ -193,7 +193,7 @@ function M.setup(config)
 
     -- -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
     -- -- TSAttribute         = { };    -- (unstable) TODO: docs
-    TSBoolean           = { fg = c.red };    -- For booleans.
+    TSBoolean = { fg = c.red }, -- For booleans.
     -- -- TSCharacter         = { };    -- For characters.
     -- -- TSComment           = { };    -- For comment blocks.
     TSNote = { fg = c.bg, bg = c.info },
@@ -219,7 +219,7 @@ function M.setup(config)
     TSNamespace = { fg = c.red }, -- For identifiers referring to modules and namespaces.
     -- -- TSNone              = { };    -- TODO: docs
     -- -- TSNumber            = { };    -- For all numbers
-    TSOperator = {fg = c.orange}, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator = { fg = c.orange }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.orange }, -- For parameters of a function.
     -- -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.fg }, -- Same as `TSField`.
@@ -291,28 +291,27 @@ function M.setup(config)
     -- Telescope
     TelescopeBorder = { fg = util.darken(c.fg, 0.75) },
     -- TelescopeBorder          = { fg = c.bg_visual, bg = c.bg },
-    TelescopeNormal          = { bg = c.bg },
-    TelescopePreviewBorder   = { fg = c.bg, bg = c.bg },
-    TelescopePreviewNormal   = { bg = c.bg },
-    TelescopePreviewTitle    = { fg = c.bg, bg = c.green },
-    TelescopePromptBorder    = { fg = c.bg_visual, bg = c.bg_visual },
-    TelescopePromptNormal    = { fg = c.fg, bg = c.bg_visual },
-    TelescopePromptPrefix    = { fg = c.red, bg = c.bg_visual},
-    TelescopePromptTitle     = { fg = c.bg, bg = c.red },
-    TelescopeResultsBorder   = { fg = c.bg, bg = c.bg },
-    TelescopeResultsNormal   = { bg = c.bg },
-    TelescopeResultsTitle    = { fg = c.bg, bg = c.bg },
-
+    TelescopeNormal = { bg = c.bg },
+    TelescopePreviewBorder = { fg = c.bg, bg = c.bg },
+    TelescopePreviewNormal = { bg = c.bg },
+    TelescopePreviewTitle = { fg = c.bg, bg = c.green },
+    TelescopePromptBorder = { fg = c.bg_visual, bg = c.bg_visual },
+    TelescopePromptNormal = { fg = c.fg, bg = c.bg_visual },
+    TelescopePromptPrefix = { fg = c.red, bg = c.bg_visual },
+    TelescopePromptTitle = { fg = c.bg, bg = c.red },
+    TelescopeResultsBorder = { fg = c.bg, bg = c.bg },
+    TelescopeResultsNormal = { bg = c.bg },
+    TelescopeResultsTitle = { fg = c.bg, bg = c.bg },
 
     -- NvimTree
     NvimTreeNormal = { fg = c.tree_normal, bg = c.bg_sidebar },
-    NvimTreeFolderIcon = {fg = c.comment},
+    NvimTreeFolderIcon = { fg = c.comment },
     NvimTreeRootFolder = { fg = c.fg_light, style = "bold" },
     NvimTreeSymlink = { fg = c.blue },
-    NvimTreeFolderName = { fg = c.tree_normal},
-    NvimTreeEmptyFolderName = { fg = c.comment},
-    NvimTreeOpenedFolderName = {fg = c.purple},
-    NvimTreeOpenedFile = { fg = c.purple}, -- TODO: not working
+    NvimTreeFolderName = { fg = c.tree_normal },
+    NvimTreeEmptyFolderName = { fg = c.comment },
+    NvimTreeOpenedFolderName = { fg = c.purple },
+    NvimTreeOpenedFile = { fg = c.purple }, -- TODO: not working
     NvimTreeGitDirty = { fg = c.yellow2 },
     NvimTreeGitNew = { fg = c.git.add },
     NvimTreeGitDeleted = { fg = c.git.delete },
@@ -344,12 +343,12 @@ function M.setup(config)
     DiagnosticWarning = { fg = c.warning },
     DiagnosticInformation = { fg = c.info },
     DiagnosticHint = { fg = c.hint },
-    LspSagaHoverBorder = { fg = c.border},
-    LspSagaSignatureHelpBorder = { fg = c.border},
-    LspSagaCodeActionBorder = { fg = c.border},
-    LspSagaAutoPreview = { fg = c.border},
-    LspSagaDefPreviewBorder = {fg = c.border},
-    LspLinesDiagBorder = { fg = c.border},
+    LspSagaHoverBorder = { fg = c.border },
+    LspSagaSignatureHelpBorder = { fg = c.border },
+    LspSagaCodeActionBorder = { fg = c.border },
+    LspSagaAutoPreview = { fg = c.border },
+    LspSagaDefPreviewBorder = { fg = c.border },
+    LspLinesDiagBorder = { fg = c.border },
 
     -- NeoVim
     healthError = { fg = c.error },
@@ -362,14 +361,14 @@ function M.setup(config)
 
     -- Hop
     HopNextKey = { fg = c.red, style = "bold" },
-	HopNextKey1 = { fg = c.blue, style = "bold" },
-	HopNextKey2 = { fg = util.darken(c.blue, 0.80) },
+    HopNextKey1 = { fg = c.blue, style = "bold" },
+    HopNextKey2 = { fg = util.darken(c.blue, 0.80) },
     HopUnmatched = { fg = c.comment },
 
-		-- ChooseWin
-		ChooseWinOther = { bg = c.bg_statusline },
-		ChooseWinLabelCurrent = { bg = util.lighten(c.blue, 0.7), fg = c.black, style = "bold" },
-		ChooseWinLabel = { bg = util.darken(c.blue, 0.9), fg = util.lighten(c.black, 0.8) },
+    -- ChooseWin
+    ChooseWinOther = { bg = c.bg_statusline },
+    ChooseWinLabelCurrent = { bg = util.lighten(c.blue, 0.7), fg = c.black, style = "bold" },
+    ChooseWinLabel = { bg = util.darken(c.blue, 0.9), fg = util.lighten(c.black, 0.8) },
   }
 
   if config.hideInactiveStatusline then
